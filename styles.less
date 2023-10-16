@@ -1,0 +1,73 @@
+@clr-bg: #515151;
+@padding-md: 1rem;
+@br-sm: 0.25rem;
+@ff-primary: Arial;
+@clr-array: red, blue, green, orange, brown;
+
+.fill-container(@items; @i: 1) when (@i <= @items) {
+  .check-container > :nth-child(@{i}) {
+    background-color: extract(@clr-array, @i);
+  }
+
+  .fill-container(@items, (@i + 1))
+}
+
+body {
+  background-color: @clr-bg;
+  font-family: @ff-primary;
+}
+
+main {
+  margin: 0 auto;
+  max-width: 37.5rem;
+}
+
+form {
+  border: 1px solid gray;
+  border-radius: @br-sm;
+
+  h1 {
+    margin: 0;
+    color: white;
+  }
+
+  fieldset {
+    padding: @padding-md;
+    border-radius: @br-sm;
+
+    > input {
+      width: 100%;
+    }
+  }
+
+  .check-container {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    margin: .5rem 0;
+  }
+
+  > fieldset {
+    border: 0
+  }
+
+  label {
+    display: flex;
+    user-select: none;
+    cursor: pointer;
+
+    span {
+      width: 100%;
+    }
+
+    :hover {
+      background-color: lightgray;
+    }
+  }
+
+  button {
+    margin: 0 auto;
+  }
+
+  .fill-container(5)
+}

@@ -1,0 +1,61 @@
+body {
+  background-color: #515151;
+  font-family: Arial;
+}
+main {
+  margin: 0 auto;
+  max-width: 37.5rem;
+}
+form {
+  border: 1px solid gray;
+  border-radius: 0.25rem;
+}
+form h1 {
+  margin: 0;
+  color: white;
+}
+form fieldset {
+  padding: 1rem;
+  border-radius: 0.25rem;
+}
+form fieldset > input {
+  width: 100%;
+}
+form .check-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+}
+form > fieldset {
+  border: 0;
+}
+form label {
+  display: flex;
+  user-select: none;
+  cursor: pointer;
+}
+form label span {
+  width: 100%;
+}
+form label :hover {
+  background-color: lightgray;
+}
+form button {
+  margin: 0 auto;
+}
+form .check-container > :nth-child(1) {
+  background-color: red;
+}
+form .check-container > :nth-child(2) {
+  background-color: blue;
+}
+form .check-container > :nth-child(3) {
+  background-color: green;
+}
+form .check-container > :nth-child(4) {
+  background-color: orange;
+}
+form .check-container > :nth-child(5) {
+  background-color: brown;
+}
